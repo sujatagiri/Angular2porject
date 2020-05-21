@@ -1,0 +1,65 @@
+<style>
+  .test:after {
+    content: '\2807';
+    font-size: 30px;
+    color: white;
+  }
+</style>
+
+<!-- <div class="container"> -->
+
+  <div class="visitor-navigation-form">
+<div style="background-color:#0084ce; padding: 20px;">
+  <div class="row">
+    <div class="col-md-12">
+      
+      <div style="float: left;">
+        <img src="./assets/flat-manager-2.png" class="mobile-logo">
+      </div>
+
+      <div style="float:right;">
+
+        <img src="../../../assets/cp.png" style="width: 32px">
+        <img src="../../../assets/logout.ico" style="width: 32px">
+
+      </div>
+
+
+      <!-- <div class="test" >  </div>  -->
+
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-fill">
+
+        <li class="nav-item">
+          <a routerLink="/" routerLinkActive="visitor-active" [routerLinkActiveOptions]="{exact:
+                  true}">&nbsp; New &nbsp;</a>
+        </li>
+
+        <li class="nav-item">
+          <a [routerLink]="['/search', 'regular']" routerLinkActive="visitor-active" [routerLinkActiveOptions]="{exact:
+                  true}">&nbsp;Regular &nbsp;</a>
+        </li>
+
+        <li class="nav-item">
+          <a [routerLink]="['/search', 'pre']" routerLinkActive="visitor-active" [routerLinkActiveOptions]="{exact:
+                  true}"> &nbsp;Pre&nbsp; </a>
+        </li>
+
+        <li class="nav-item">
+          <a [routerLink]="['/search', 'out']" routerLinkActive="visitor-active" [routerLinkActiveOptions]="{exact:
+                  true}">&nbsp; Out &nbsp;</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

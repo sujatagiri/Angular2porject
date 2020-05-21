@@ -1,0 +1,110 @@
+
+<div class="jumbotron" style="background-color: white;">
+  <form #frm="ngForm">
+    <div class="input-group" style="height: 38px;">
+      <input type="text" class="form-control" placeholder="Search" name="search">
+      <div class="input-group-btn">
+        <button class="btn btn-primary" type="submit" style="height: 38px;  width: 75px; background-color: #0084ce;">
+          <i class="glyphicon glyphicon-search" style="font-size: 19px;"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- <div class="row">   
+    
+  <div class="col-xs-3">
+        <img src="../../../assets/flat-manager-2.png" alt="Lights" style="width:100%">
+   </div>
+   
+   <div class="col-xs-9">
+
+      <div class="row">
+          <div class="col-md-8">
+            <div class="col-sm-4"><p style="width:33.3%; float: left;"> Name of Visitor</p>   </div>
+            <div class="col-sm-4"><p style="width:33.3%; float: left;">Whom To Meet</p> </div>
+            <div class="col-sm-4"><p style="width:33.3%; float: left;">Meeting Person Address</p> </div>
+          </div>
+
+          <div class="col-xs-4"> Mobile  no</div>
+      </div>
+         
+   </div>
+      
+   </div>  -->
+ 
+
+ <div class="row" id="desktop-container-content">
+       
+    <div class="col-md-2">
+      <p> Select </p>   
+    </div>
+
+    <div class="col-md-2" >
+      <p> Name of Visitor </p>
+    </div>
+
+    <div class="col-md-2" >
+      <p>  Phone #  </p>
+    </div>
+
+    <div class="col-md-2">
+      <p> Whom To Meet </p>
+    </div>
+
+    <div class="col-md-4">
+      <p> Meeting Person Address </p>
+    </div>
+
+</div> 
+
+<div class="row" id="container-content"  [routerLink]="['/visitordetail', pageRoutedFrom,'2']">
+   
+<div class="col-md-2" >
+  
+    <img src="../../../assets/flat-manager-2.png" class="visitor-img"/>
+   
+</div>
+
+<div class="col-md-2" id ="visior-name">
+  <p> vijay </p>
+</div>
+
+<div class="col-md-2" id="visitor-mobileno">
+  <p>  9811957132  </p>
+</div>
+
+<div class="col-md-2" id="visitor-whomtomeet">
+  <p> Manoj Kothari  </p>
+</div>
+
+<div class="col-md-4" id="metting-person-add">
+  <p> 9005, Crossings Republik </p>
+</div>
+
+</div>
+
+<div class="row" id="container-content"  [routerLink]="['/visitordetail', pageRoutedFrom,'2']">
+   
+<div class="col-md-2"> 
+    <img src="../../../assets/flat-manager-2.png" class="visitor-img"/> 
+</div>
+
+<div class="col-md-2" id ="visior-name">
+  <p> vijay </p>
+</div>
+
+<div class="col-md-2" id="visitor-mobileno">
+  <p>  9811957132  </p>
+</div>
+
+<div class="col-md-2" id="visitor-whomtomeet">
+  <p> Manoj Kothari  </p>
+</div>
+
+<div class="col-md-4" id="metting-person-add">
+  <p> 9005, Crossings Republik </p>
+</div> 
+
+</div>

@@ -1,0 +1,21 @@
+
+ a.visitor-active {
+   color: #ffffff;
+   font-size: 14px;
+   font-weight: bolder;
+   border-bottom-style: solid;
+   border-bottom-color: #ffffff;
+   text-decoration: none;
+   padding-bottom: 2px;
+} 
+
+a {
+    text-decoration: none;
+    color: white;
+} 
+
+a.visitor-inactive {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+ } 

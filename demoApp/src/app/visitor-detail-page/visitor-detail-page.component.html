@@ -1,0 +1,189 @@
+<div class="form-detail-container">
+  <div class="jumbotron" style="background-color: white;">
+    <form #frm="ngForm">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="./assets/pic1.jpg" class="img-responsive" style="width:50%">
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div style="width:100%">
+
+            <div class="row">
+              <div class="col-xs-6" style="width: 50%;float: left;">
+                <p class="font-weight-Normal">Name</p>
+              </div>
+              <div class="col-xs-6">
+                <p class="font-weight-bold">sujata</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6" style="width: 50%;float: left;">
+                <p class="font-weight-Normal">Mobile</p>
+              </div>
+              <div class="col-xs-6">
+                <p class="font-weight-bold">9852544125</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6" style="width: 50%;float: left;">
+                <p class="font-weight-Normal">Address</p>
+              </div>
+              <div class="col-xs-6">
+                <p class="font-weight-bold">9005, Crossings Republik</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6" style="width: 50%;float: left;">
+                <p class="font-weight-Normal">Purpose</p>
+              </div>
+              <div class="col-xs-6">
+                <p class="font-weight-bold">Any</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6" style="width: 50%;float: left;">
+                <p class="font-weight-Normal">Type of Visitor</p>
+              </div>
+              <div class="col-xs-6">
+                <p class="font-weight-bold"> Friend/ Family</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6" style="width: 50%;float: left;">
+                <p class="font-weight-Normal">Vehicle</p>
+              </div>
+              <div class="col-xs-6">
+                <p class="font-weight-bold"> UP14-B-3456</p>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-xs-6" style="width: 50%;float: left;">
+                <p class="font-weight-Normal">No of Person</p>
+              </div>
+              <div class="col-xs-6">
+                <p class="font-weight-bold">4</p>
+              </div>
+            </div>
+
+
+            <div *ngIf="(HideForRegularVisitor())">
+              <div class="row">
+                <div class="col-xs-6" style="width: 50%;float: left;">
+                  <p class="font-weight-Normal">Resident Name</p>
+                </div>
+
+                <div class="col-xs-6">
+                  <p class="font-weight-bold">Manoj </p>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-xs-6" style="width: 50%;float: left;">
+                  <p class="font-weight-Normal">Resident Mobile</p>
+                </div>
+                <div class="col-xs-6">
+                  <p class="font-weight-bold">988952144</p>
+                </div>
+              </div>
+             <div class="row">
+                <div class="col-xs-6" style="width: 50%;float: left;">
+                  <p class="font-weight-Normal">Resident Address</p>
+                </div>
+                <div class="col-xs-6">
+                  <p class="font-weight-bold">9005, E1, Tower-1 </p>
+                </div>
+              </div>   
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+    <br>
+   
+    <div class="regularvisitor" *ngIf="(getSelectedComponent('regular'))">
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <span class="k1">
+            <p class="font-weight-light"> Residence Address</p>
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="WhomToMeet" ngModel required #frmGuestOf="ngModel" placeholder="Name " autocomplete="off">
+        </div>
+
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="guestOfMobileNumber" ngModel required #frmGuestOfMobileNo="ngModel" placeholder="Mobile Number"
+            autocomplete="off">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="FlatNO" ngModel required #frmEmail="ngModel" placeholder="Flat#" required autocomplete="off">
+        </div>
+
+        <div class="col-md-4" style="margin-top: 1%;">
+          <select name="Tower" ngModel #frmTower="ngModel" class="form-control" style="color:#a5a5a5;">
+            <option name="Tower" name="Tower"> Tower </option>
+          </select>
+        </div>
+
+        <div class="col-md-4" style="margin-top:  1%;">
+          <select name="Block" ngModel #frmBlock="ngModel" class="form-control" style="color:#a5a5a5;">
+            <option name="Block" name="Tower">Block</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pre Registered Verification Details  -->
+
+    <div class="preregistered" *ngIf="(getSelectedComponent('pre'))">
+
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" class="form-control" name="guestOfMobileNumber" ngModel required #frmGuestOfMobileNo="ngModel" placeholder="Verification Code"
+            autocomplete="off">
+        </div>
+
+      </div>
+      <br>
+      <br>
+      <button type="button" class="btn btn-primary" name="btnSwitch" style="width: 8%; padding: 12px">Save</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="button" class="btn btn-danger" name="btnStop" style="width: 8%; padding: 12px">Cancel</button>
+
+    </div>
+
+
+    <div class="out" *ngIf="(getSelectedComponent('out'))">
+      <br>
+      <div claas="form-group">
+        <br>
+        <textarea cols="70" rows="3" (input)="str = $event.target.value" placeholder="Comment" id="out-comment-detail"></textarea>
+        <br><br>
+        <button type="button" class="btn btn-primary" name="btnSwitch" id="out-button">Out </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

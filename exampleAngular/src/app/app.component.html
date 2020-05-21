@@ -1,0 +1,23 @@
+<h1>Hello</h1>
+<div class="container">
+  <app-cockpit></app-cockpit>
+  <hr>
+  <div class="row">
+      <div class="col-xs-12">
+      <app-server-element *ngFor="let serverElement of serverElements"></app-server-element>         
+    </div>
+  </div>
+</div>
+
+<div>
+  <button type="button" class="btn btn-primary" (click)="onlyOdd = !onlyOdd">Only show Odd NUmber</button>
+  <br> <br>
+  <ul class="list-group">
+    <div *ngIf="onlyOdd">
+      <li class="list-group-item" [ngClass]="{odd : odd % 2 !== 0}" *ngFor="let odd of oddNumber"> {{odd}}</li>
+    </div>
+    <div *ngIf="!onlyOdd">
+      <li class="list-group-item" *ngFor="let even of evenNumber"> {{even}}</li>
+    </div>
+  </ul>
+</div>

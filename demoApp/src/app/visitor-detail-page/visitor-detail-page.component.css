@@ -1,0 +1,51 @@
+
+.form-control {
+  border-radius:0px;
+  border:none;
+  border-bottom: solid 1px #e5e5e5;
+  color:#4a4747;
+  padding: 10px;
+  margin-top: 5px;
+  font-family: arial;
+  font-size: 14px;
+}
+.img {
+ float:left;
+ border-radius: 50%;
+} 
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .img{
+      float:none;
+      display:table;
+      margin: 0 auto;
+  }
+  }
+  .k1
+  {
+  color:#a5a5a5;
+  font-family: arial;
+  font-size: 14px;
+  }
+
+  ::placeholder {
+    color:#a5a5a5;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color:#a5a5a5;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+color:#a5a5a5;
+}
+
+
+
+.form-control:focus {
+  box-shadow:none;
+  -webkit-box-shadow:none; 
+ 
+ }

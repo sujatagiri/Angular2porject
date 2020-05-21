@@ -1,0 +1,177 @@
+*{
+    font-size: 12px;
+}
+.header-navigation {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.view-more ul li a {
+    text-decoration: none;
+   color: black;
+   font-weight: bold;  
+}
+
+.view-more ul li {
+    display: block;
+    padding: 5px;
+}
+
+
+.form-detail-container {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.view-more {
+    width: 15%;
+    float: right;
+    margin-right: 15%;
+    position: absolute;
+    background-color:#eee;
+    /* transition: all 2s ease-out; */
+}
+
+@media only screen and (max-width: 800px) and (min-width: 300px)  {
+   .view-more {
+    width: 18%;
+    float: right;
+    position: absolute;
+    right: 16%;
+   }
+
+   .test {
+    float: right;
+    position: absolute;
+    right: 6%;
+   }
+    #desktop-container-content {
+        display: none;
+    }
+
+    .visitor-img  {
+    margin-left: 3%;
+    }
+   
+    #visior-name p {
+        margin-top: -65PX;
+        margin-left: 27%;
+        
+    }
+
+    #visitor-mobileno p { 
+        float: right;
+    }
+
+    #visitor-mobileno p {
+        float: right;
+        margin-top: -15%;
+        margin-right: 8%;   
+    }
+
+    #visitor-whomtomeet p {
+        float: left;
+        margin-top: -12.8%;
+        margin-left: 27%;
+    }
+
+    #metting-person-add p {
+        float: left;
+        margin-top: -9%;
+        margin-left: 27%;
+    }
+    #out-comment-detail {
+       width: 80%;
+       margin-left: 10%;
+       margin-right: 10%;
+    }
+
+    
+     /* .display-mobile {
+       display: visible;   
+    }
+    .mobile-logo {
+     width: 30%;
+     border-radius: 30%;
+   height: 60%;
+    }   */
+    /* #person-radio-btn .visitor-img {
+        float: left;
+        margin-left: 13px;
+        background-color: red;
+    } */
+   
+ /* .form-control
+{
+  border-radius:0px;
+  border:none;
+  border-bottom: solid 1px #e5e5e5;
+  color:#4a4747;
+  padding: 10px;
+  margin-top: 5px;
+  font-family: arial;
+  font-size: 14px;
+} */
+
+ }
+
+@media only screen and (max-width: 1600px) and (min-width: 800px)  {
+
+   #desktop-container-content {
+    margin-left: 1%;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    background-color: #ffffff;
+   }
+
+   #container-content {
+   
+    border-bottom: 1px solid #eee;
+    background-color: #ffffff;
+   }
+
+   #visior-name {
+    margin-top: 2%; 
+    font-size: 12px;
+   }
+   #visitor-mobileno{
+    margin-top: 2%; 
+    font-size: 12px;
+   }
+   #visitor-whomtomeet {
+    margin-top: 2%; 
+    font-size: 12px;
+   }
+   #metting-person-add {
+    margin-top: 2%; 
+    font-size: 12px;
+   }
+   #out-comment-detail{
+    margin-left: 28%;
+   }
+    #out-button{
+        margin-left: 28%;
+    }
+   
+}
+
+.visitor-form-control
+{
+  border-radius:0px;
+  border:none;
+  border-bottom: solid 1px #e5e5e5;
+  color:#4a4747;
+  padding: 10px;
+  margin-top: 5px;
+  font-family: arial;
+}
+
+
+@media only screen and (max-width: 1600px) and (min-width: 800px)  {
+
+.visitor-navigation-form {
+    width: 100%;
+    margin: 0px auto;
+} 
+
+}

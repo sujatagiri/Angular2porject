@@ -1,0 +1,158 @@
+<div class="jumbotron" style="background-color: white">
+  <form #frm="ngForm" ngNativeValidate (submit)="submitForm(frm)">
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <img src="./assets/pic1.jpg" class="img-circle img" id="visitor-image">
+      </div>
+
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="first_name" ngModel #frmFName="ngModel" placeholder="First Name" autocomplete="off"
+          pattern="[a-zA-Z][a-zA-Z]+" required>
+
+        <input type="text" class="form-control" name="last_name" ngModel #frmLName="ngModel" placeholder="Last Name" autocomplete="off">
+        <input type="number" class="form-control" name="mobile" ngModel #frmContactNo="ngModel" maxlength="10" minlength="7" placeholder="Mobile"
+          autocomplete="off" required>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+
+        <input type="text" class="form-control" name="address" ngModel #frmvisitoraddress="ngModel" placeholder="Address"
+          autocomplete="off" required>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="vehicle_no" ngModel #frmVehicle="ngModel" placeholder="Vehicle #" autocomplete="off">
+      </div>
+
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="no_of_person" ngModel #frmNoOfPerson="ngModel" placeholder="No of Person" autocomplete="off">
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" class="form-control" name="purpose" ngModel required #frmPurpose="ngModel" placeholder="Purpose" autocomplete="off">
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        
+        <select name="visitor_type" ngModel #frmVisitorType="ngModel" class="form-control" style="color:#a5a5a5;" (change)="visitorTypes(frmVisitorType)">
+          <option selected="selected" value="-1">Visitor Type</option>
+          <option style="color:#a5a5a5;" value="visitorfamily">Family/ Friend</option>
+          <option value="visitorPersonalMaid">Personal Maid</option>
+          <option value="visitorPersonalDriver">Personal Driver</option>
+          <option value="visitorDeliveryBoy">Delivery Boy</option>
+          <option value="visitorOther"> Other </option>
+        </select>
+      </div>
+
+      <div class="col-md-6" *ngIf="visitorOther">
+        <input type="text" class="form-control" name="otherType" ngModel #frmOther="ngModel" placeholder="Other" autocomplete="off">
+      </div>
+
+    </div>
+
+    <div class="row" style="margin-top: 20px;">
+
+      <div class="col-md-4">
+        <span class="k1">Are you a Regular Visitor</span>
+      </div>
+
+      <div class="col-md-4">
+        <input type="radio" value="yes" name="n1">
+        <label style="color:#a5a5a5;">Yes</label>
+      </div>
+
+      <div class="col-md-4">
+        <input type="radio" value="no" name="n1">
+        <label style="color:#a5a5a5;">No</label>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="WhomToMeet" ngModel required #frmGuestOf="ngModel" placeholder="Residence Guest"
+          autocomplete="off">
+      </div>
+
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="guestOfMobileNumber" ngModel required #frmGuestOfMobileNo="ngModel" placeholder="Residence Mobile Number"
+          autocomplete="off">
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <span class="k1"> Residence Address</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <input type="text" class="form-control" name="FlatNO" ngModel required #frmEmail="ngModel" placeholder="Flat#" required autocomplete="off">
+      </div>
+
+      <div class="col-lg-4" style="margin-top:  1%;">
+        <select name="Tower" ngModel #frmTower="ngModel" class="form-control" style="color:#a5a5a5;">
+
+          <option name="Tower" name="Tower"> Tower </option>
+        </select>
+      </div>
+
+      <div class="col-md-4" style="margin-top:  1%;">
+        <select name="Block" ngModel #frmBlock="ngModel" class="form-control" style="color:#a5a5a5;">
+          <option name="Block" name="Tower">Block</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <button type="submit" class="btn btn-primary" name="btnSwitch">Save</button>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-danger" name="btnStop">Cancel</button>
+  </form>
+
+  {{ frm.value | json }}
+  
+</div>
+
+
+<ul>
+   <li *ngFor="let dataobj of data">  
+    {{dataobj.first_name}}
+    </li>
+ </ul>
+
+
+
+<!-- 
+pattern="[a-zA-Z][a-zA-Z]+"
+pattern="[0-9]*"
+pattern="^\W+(\.-]?\W+)*@\W+([\.-]?\W+)*(\.\W{2,3})+$" -->
+
+
+ <!-- <button type="button"  name ="button" (click)="getItemServiceClass()"> Show </button>
+   <ul class="list-group">
+      <li *ngFor="let item of itemVisitorReceived">
+        {{item}}
+      </li>
+  </ul>  -->
